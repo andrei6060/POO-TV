@@ -6,9 +6,19 @@ public class Action {
     String feature;
     Credentials credentials;
     String movie;
-    String startWith;
+    String startsWith;
     Integer count;
     Integer rate;
+
+    private Filter filters;
+
+    public Filter getFilters() {
+        return filters;
+    }
+
+    public void setFilters(Filter filters) {
+        this.filters = filters;
+    }
 
     public String getType() {
         return type;
@@ -50,12 +60,12 @@ public class Action {
         this.movie = movie;
     }
 
-    public String getStartWith() {
-        return startWith;
+    public String getStartsWith() {
+        return startsWith;
     }
 
-    public void setStartWith(String startWith) {
-        this.startWith = startWith;
+    public void setStartsWith(String startsWith) {
+        this.startsWith = startsWith;
     }
 
     public Integer getCount() {
