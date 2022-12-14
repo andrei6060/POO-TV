@@ -1,14 +1,14 @@
 package checker.Clase;
 
-public  class sort{
-    String rating;
-    String duration;
+public final class Sort {
+    private String rating;
+    private String duration;
 
     public String getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(final String rating) {
         this.rating = rating;
     }
 
@@ -16,7 +16,7 @@ public  class sort{
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(final String duration) {
         this.duration = duration;
     }
 }

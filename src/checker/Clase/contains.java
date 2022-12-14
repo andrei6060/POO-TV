@@ -2,15 +2,15 @@ package checker.Clase;
 
 import java.util.ArrayList;
 
-public class contains{
-    ArrayList<String> actors;
-    ArrayList<String> genre;
+public final class Contains {
+    private ArrayList<String> actors;
+    private ArrayList<String> genre;
 
     public ArrayList<String> getActors() {
         return actors;
     }
 
-    public void setActors(ArrayList<String> actors) {
+    public void setActors(final ArrayList<String> actors) {
         this.actors = actors;
     }
 
@@ -18,7 +18,7 @@ public class contains{
         return genre;
     }
 
-    public void setGenre(ArrayList<String> genre) {
+    public void setGenre(final ArrayList<String> genre) {
         this.genre = genre;
     }
 }

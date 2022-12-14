@@ -4,36 +4,38 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
 @JsonIgnoreProperties({ "ratings" })
-public class Movie {
-    String name;
-    Integer year;
-    Integer duration;
-    ArrayList<Integer> ratings = new ArrayList<>();
-    ArrayList<String> genres = new ArrayList<>();
-    ArrayList<String> actors = new ArrayList<>();
-    ArrayList<String> countriesBanned = new ArrayList<>();
-    int numLikes;
-    int numRatings;
-    double rating;
-    public  Movie(){}
+public final class Movie {
+    private String name;
+    private Integer year;
+    private Integer duration;
+    private ArrayList<Integer> ratings = new ArrayList<>();
+    private ArrayList<String> genres = new ArrayList<>();
+    private ArrayList<String> actors = new ArrayList<>();
+    private ArrayList<String> countriesBanned = new ArrayList<>();
+    private int numLikes;
+    private int numRatings;
+    private double rating;
+    public  Movie() {
 
-    public Movie(Movie movie){
+    }
+
+    public Movie(final Movie movie) {
         this.setNumRatings(movie.getNumRatings());
         this.setRating(movie.getRating());
         this.setNumLikes(movie.getNumLikes());
         this.setName(movie.getName());
         this.setYear(movie.getYear());
         this.setDuration(movie.getDuration());
-        for(String string:movie.getCountriesBanned()){
+        for (String string:movie.getCountriesBanned()) {
             this.getCountriesBanned().add(string);
         }
-        for(String string:movie.getActors()){
+        for (String string:movie.getActors()) {
             this.getActors().add(string);
         }
-        for(String string:movie.getGenres()){
+        for (String string:movie.getGenres()) {
             this.getGenres().add(string);
         }
-        for(Integer intt:movie.getRatings()){
+        for (Integer intt:movie.getRatings()) {
             this.getRatings().add(intt);
         }
     }
@@ -42,7 +44,7 @@ public class Movie {
         return ratings;
     }
 
-    public void setRatings(ArrayList<Integer> ratings) {
+    public void setRatings(final ArrayList<Integer> ratings) {
         this.ratings = ratings;
     }
 
@@ -50,7 +52,7 @@ public class Movie {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -58,7 +60,7 @@ public class Movie {
         return year;
     }
 
-    public void setYear(Integer year) {
+    public void setYear(final Integer year) {
         this.year = year;
     }
 
@@ -70,7 +72,7 @@ public class Movie {
         return numLikes;
     }
 
-    public void setNumLikes(int numLikes) {
+    public void setNumLikes(final int numLikes) {
         this.numLikes = numLikes;
     }
 
@@ -78,7 +80,7 @@ public class Movie {
         return numRatings;
     }
 
-    public void setNumRatings(int numRatings) {
+    public void setNumRatings(final int numRatings) {
         this.numRatings = numRatings;
     }
 
@@ -86,11 +88,11 @@ public class Movie {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(final double rating) {
         this.rating = rating;
     }
 
-    public void setDuration(Integer duration) {
+    public void setDuration(final Integer duration) {
         this.duration = duration;
     }
 
@@ -98,7 +100,7 @@ public class Movie {
         return genres;
     }
 
-    public void setGenres(ArrayList<String> genres) {
+    public void setGenres(final ArrayList<String> genres) {
         this.genres = genres;
     }
 
@@ -106,7 +108,7 @@ public class Movie {
         return actors;
     }
 
-    public void setActors(ArrayList<String> actors) {
+    public void setActors(final ArrayList<String> actors) {
         this.actors = actors;
     }
 
@@ -114,7 +116,7 @@ public class Movie {
         return countriesBanned;
     }
 
-    public void setCountriesBanned(ArrayList<String> countriesBanned) {
+    public void setCountriesBanned(final ArrayList<String> countriesBanned) {
         this.countriesBanned = countriesBanned;
     }
 }

@@ -6,37 +6,46 @@ import checker.Clase.User;
 
 import java.util.ArrayList;
 
-public class DataBase {
-    User currentUser = null;
-    ArrayList<User> users = new ArrayList<>();
-    ArrayList<Movie> movies = new ArrayList<>();
-    ArrayList<Movie> moviesForUser = new ArrayList<>();
-    ArrayList<Movie> moviesForSee = new ArrayList<>();
+public final class DataBase {
+    private User currentUser = null;
+    private ArrayList<User> users;
+    private ArrayList<Movie> movies;
+    private ArrayList<Movie> moviesForUser = new ArrayList<>();
+    private ArrayList<Movie> moviesForSee = new ArrayList<>();
 
     public ArrayList<Movie> getMoviesForSee() {
         return moviesForSee;
     }
 
-    public void setMoviesForSee(ArrayList<Movie> moviesForSee) {
+    public void setMoviesForSee(final ArrayList<Movie> moviesForSee) {
         this.moviesForSee = moviesForSee;
     }
 
-    public DataBase(Input input){
+    public DataBase(final Input input) {
         users = new ArrayList<>(input.getUsers());
 
         movies = new ArrayList<>();
-        for(Movie movie: input.getMovies()){
+        for (Movie movie: input.getMovies()) {
             Movie movie1 = new Movie(movie);
             movies.add(movie1);
         }
 
     }
+//    private static DataBase instance = null;
+//
+//
+//    public static DataBase getDatabase(final Input input) {
+//        if (instance == null) {
+//            instance = new DataBase(input);
+//        }
+//        return instance;
+//    }
 
     public User getCurrentUser() {
         return currentUser;
     }
 
-    public void setCurrentUser(User currentUser) {
+    public void setCurrentUser(final User currentUser) {
         this.currentUser = currentUser;
     }
 
@@ -44,7 +53,7 @@ public class DataBase {
         return users;
     }
 
-    public void setUsers(ArrayList<User> users) {
+    public void setUsers(final ArrayList<User> users) {
         this.users = users;
     }
 
@@ -52,7 +61,7 @@ public class DataBase {
         return movies;
     }
 
-    public void setMovies(ArrayList<Movie> movies) {
+    public void setMovies(final ArrayList<Movie> movies) {
         this.movies = movies;
     }
 
@@ -60,7 +69,7 @@ public class DataBase {
         return moviesForUser;
     }
 
-    public void setMoviesForUser(ArrayList<Movie> moviesForUser) {
+    public void setMoviesForUser(final ArrayList<Movie> moviesForUser) {
         this.moviesForUser = moviesForUser;
     }
 }

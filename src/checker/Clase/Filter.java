@@ -1,25 +1,24 @@
 package checker.Clase;
 
-import java.util.ArrayList;
 
-public class Filter {
+public final class Filter {
 
-    sort sort;
-    contains contains;
+    private Sort Sort;
+    private Contains Contains;
 
-    public checker.Clase.sort getSort() {
-        return sort;
+    public checker.Clase.Sort getSort() {
+        return Sort;
     }
 
-    public void setSort(checker.Clase.sort sort) {
-        this.sort = sort;
+    public void setSort(final checker.Clase.Sort sort) {
+        this.Sort = sort;
     }
 
-    public checker.Clase.contains getContains() {
-        return contains;
+    public checker.Clase.Contains getContains() {
+        return Contains;
     }
 
-    public void setContains(checker.Clase.contains contains) {
-        this.contains = contains;
+    public void setContains(final checker.Clase.Contains contains) {
+        this.Contains = contains;
     }
 }
