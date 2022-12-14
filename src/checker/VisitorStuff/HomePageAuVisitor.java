@@ -273,7 +273,7 @@ public final class HomePageAuVisitor implements Visitor {
             } else if (page.getCurrentPage().equals("see details")) {
                 if (action.getPage().equals("movies")) {
                     page.setCurrentPage("movies");
-                    if (dataBase.getMoviesForUser().size() == 0) {
+                    if ((dataBase.getMoviesForUser().size() == 0) || (dataBase.getMoviesForUser().size() == 1) ){
                     dataBase.setMoviesForUser(new ArrayList<>());
                     int k;
                     for (Movie movie : dataBase.getMovies()) {
